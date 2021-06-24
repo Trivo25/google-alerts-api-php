@@ -1,0 +1,4 @@
+<?php
+
+// Google Alerts Cookiestring
+define("GOOGLE_ALERTS_AUTHSTRING", "....");
