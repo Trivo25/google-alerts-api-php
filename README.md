@@ -1,6 +1,6 @@
 # google-alerts-api-php
 
-# This API is still deeply in WIP. No tests have been written yet and there is no way to modify alerts (yet).
+# This API is still very much a WIP. No tests have been written yet and there is no way to modify alerts.
 
 ## Thanks to https://github.com/adasq/google-alerts-api for developing a NodeJS API
 
