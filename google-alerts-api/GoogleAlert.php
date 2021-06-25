@@ -169,8 +169,12 @@ class GoogleAlert
 
 	function getAlertID($responseBody)
 	{
-		if (isset(json_decode($responseBody)[4][0][3][6][0][11])) return json_decode($responseBody)[4][0][3][6][0][11];
+		preg_match('/\/alerts\/feeds\/' . $this->getUserID($responseBody) . '\/(\d+)/', $responseBody, $matches);
+		if (isset($matches[1])) return $matches[1];
 		else return null;
+
+		// if (isset(json_decode($responseBody)[4][0][3][6][0][11])) return json_decode($responseBody)[4][0][3][6][0][11];
+		// else return null;
 	}
 
 	function getWindowState($body)
@@ -192,7 +196,13 @@ class GoogleAlert
 
 	function getDeleteId($responseBody)
 	{
-		if (isset(json_decode($responseBody)[4][0][1])) return json_decode($responseBody)[4][0][1];
+		// echo json_decode($responseBody)[4][0][1];
+
+		preg_match('/data-id=\\\\"([^"]*)\\\\"/', $responseBody, $matches);
+		if (isset($matches[1])) return $matches[1];
 		else return null;
+
+		// if (isset(json_decode($responseBody)[4][0][1])) return json_decode($responseBody)[4][0][1];
+		// else return null;
 	}
 }
