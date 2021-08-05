@@ -1,8 +1,8 @@
 # google-alerts-api-php
 
-# This API is still very much a WIP. No tests have been written yet and there is no way to modify alerts.
+**_This API Client is still WIP and only allows access to the CREATE and DELETE endpoints for Google Alerts._**
 
-## Thanks to https://github.com/adasq/google-alerts-api for developing a NodeJS API
+**Thanks to github.com/adasq/google-alerts-api for developing a NodeJS version**
 
 A Google Alerts API that allows you to create Google Alerts via PHP and have them delievered to a RSS feed.
 
@@ -103,4 +103,4 @@ window.btoa(
 2. Copy this code into the Console of your borwser and execute it
 3. Copy the output (your auth string) into the `config.php`
 
-## Make sure to enable "login from insecure apps" if having any issues connecting
+**Make sure to enable "login from insecure apps" if having any issues connecting**
